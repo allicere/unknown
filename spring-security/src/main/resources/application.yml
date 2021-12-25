@@ -1,0 +1,29 @@
+spring:
+  # 数据库连接的配置
+  datasource:
+    # 对应的数据库驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接地址
+    url: xxx
+    # 账号
+    username: xxx
+    # 密码
+    password: xxx
+  # flyway的配置
+  flyway:
+    # 是否启用flyway，默认为true
+    enabled: true
+    # 编码格式，默认为utf-8
+    encoding: UTF-8
+    # 迁移sql脚本文件存放路径,默认为classpath:db/migration
+    locations: classpath:db/migration
+    # 迁移sql脚本文件名称的前缀，默认为V
+    sql-migration-prefix: V
+    # 迁移sql脚本文件名称的分隔符，默认为2个下划线__
+    sql-migration-separator: __
+    # 迁移sql脚本文件名称的后缀，默认为.sql
+    sql-migration-suffixes: .sql
+    # 迁移时是否进行校验，默认为true
+    validate-on-migrate: true
+    # 当迁移发现数据库非空且存在没有元数据的表时，自动执行基准迁移，新建schema_version表
+    baseline-on-migrate: true
