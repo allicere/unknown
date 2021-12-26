@@ -37,3 +37,4 @@ mvnw
 mvnw.cmd
 .mvn/
 src/test/
+src/main/resources/application.yml
